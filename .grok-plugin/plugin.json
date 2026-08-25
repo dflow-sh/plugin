@@ -11,12 +11,7 @@
   "license": "MIT",
   "keywords": [
     "dflow",
-    "dflow.sh",
-    "deployment",
-    "infrastructure",
-    "devops",
-    "monitoring",
-    "logging"
+    "dflow.sh"
   ],
   "mcpServers": "./mcp.json"
 }
