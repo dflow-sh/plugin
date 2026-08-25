@@ -1,0 +1,22 @@
+{
+  "name": "dflow",
+  "version": "0.1.0",
+  "description": "dFlow plugin for creating apps and environments, attach databases and services, manage domains and env vars, and trigger deploys on your own infrastructure.",
+  "author": {
+    "name": "dFlow",
+    "url": "https://dflow.sh"
+  },
+  "homepage": "https://dflow.sh",
+  "repository": "https://github.com/dflow-sh/plugin",
+  "license": "MIT",
+  "keywords": [
+    "dflow",
+    "dflow.sh",
+    "deployment",
+    "infrastructure",
+    "devops",
+    "monitoring",
+    "logging"
+  ],
+  "mcpServers": "./mcp.json"
+}
