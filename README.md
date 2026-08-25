@@ -34,9 +34,17 @@ Product overview: [dFlow AI workflow](https://dflow.sh/ai-workflow) · docs: [df
 
 ## Install
 
+### Cursor
+
+Once listed on the [Cursor Marketplace](https://cursor.com/marketplace), install from **Cursor Settings → Plugins**. To publish, submit `https://github.com/dflow-sh/plugin` at [cursor.com/marketplace/publish](https://cursor.com/marketplace/publish).
+
+Until then you can load this repo as a local Cursor plugin (Settings → Plugins, or a local plugin path pointing at this clone). Complete the OAuth prompt on first MCP connect.
+
+### Grok / xAI
+
 Once listed on the [xAI plugin marketplace](https://github.com/xai-org/plugin-marketplace), install from Grok Build’s marketplace UI.
 
-Until then, from a clone of this repo (or via GitHub):
+Until then:
 
 ```bash
 grok plugin install dflow-sh/plugin --trust
@@ -48,13 +56,15 @@ Complete the OAuth prompt, then run a read-only tool such as listing application
 
 ```text
 .
-├── mcp.json                 # Canonical MCP config (Cursor / Agent Plugins)
-├── .grok-plugin/plugin.json # Grok / xAI manifest; points at ./mcp.json
+├── mcp.json                      # Canonical MCP config (shared)
+├── .cursor-plugin/plugin.json    # Cursor marketplace manifest
+├── .grok-plugin/plugin.json      # Grok / xAI manifest; points at ./mcp.json
+├── assets/logo.svg
 ├── README.md
 └── LICENSE
 ```
 
-One MCP payload, two discovery paths. xAI indexes `.grok-plugin/plugin.json` and follows `mcpServers` to `mcp.json`. Cursor can later auto-discover the same `mcp.json` without a second server file.
+One MCP payload. Cursor auto-discovers `mcp.json`. xAI indexes `.grok-plugin/plugin.json` and follows `mcpServers` to the same file.
 
 ## Network and security
 
