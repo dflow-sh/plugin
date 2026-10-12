@@ -40,6 +40,10 @@ Once listed on the [Cursor Marketplace](https://cursor.com/marketplace), install
 
 Until then you can load this repo as a local Cursor plugin (Settings → Plugins, or a local plugin path pointing at this clone). Complete the OAuth prompt on first MCP connect.
 
+### Claude Code
+
+Claude Code reads `.mcp.json` and `.claude-plugin/plugin.json` from this repo. On first connect, approve OAuth in the browser.
+
 ### Grok / xAI
 
 Once listed on the [xAI plugin marketplace](https://github.com/xai-org/plugin-marketplace), install from Grok Build’s marketplace UI.
@@ -56,15 +60,17 @@ Complete the OAuth prompt, then run a read-only tool such as listing application
 
 ```text
 .
-├── mcp.json                      # Canonical MCP config (shared)
-├── .cursor-plugin/plugin.json    # Cursor marketplace manifest
-├── .grok-plugin/plugin.json      # Grok / xAI manifest; points at ./mcp.json
+├── mcp.json                      # Cursor MCP config
+├── .mcp.json                     # Claude Code MCP config (same URL, plus a sign-in note)
+├── .cursor-plugin/plugin.json    # Cursor manifest
+├── .grok-plugin/plugin.json      # Grok manifest; points at ./mcp.json
+├── .claude-plugin/plugin.json    # Claude Code manifest
 ├── assets/logo.svg
 ├── README.md
 └── LICENSE
 ```
 
-One MCP payload. Cursor auto-discovers `mcp.json`. xAI indexes `.grok-plugin/plugin.json` and follows `mcpServers` to the same file.
+One server URL. Each product only gets the manifest folder it looks for. This repo does not ship skills, agents, commands, or hooks.
 
 ## Network and security
 
