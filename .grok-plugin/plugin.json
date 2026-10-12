@@ -1,7 +1,8 @@
 {
   "name": "dflow",
+  "displayName": "dFlow",
   "version": "0.1.0",
-  "description": "dFlow plugin for creating apps and environments, attach databases and services, manage domains and env vars, and trigger deploys on your own infrastructure.",
+  "description": "Deploy apps and databases on dFlow from your agent. Inspect logs, set variables, and attach databases with the same permissions as the dashboard.",
   "author": {
     "name": "dFlow",
     "url": "https://dflow.sh"
