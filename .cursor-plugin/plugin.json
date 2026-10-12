@@ -2,7 +2,7 @@
   "name": "dflow",
   "displayName": "dFlow",
   "version": "0.1.0",
-  "description": "Connect to dFlow Cloud to create apps, databases, and services, manage domains and env vars, and trigger deploys.",
+  "description": "Deploy apps and databases on dFlow from your agent. Inspect logs, set variables, and attach databases with the same permissions as the dashboard.",
   "author": {
     "name": "dFlow"
   },

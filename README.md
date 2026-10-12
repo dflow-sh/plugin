@@ -1,6 +1,6 @@
 # dFlow plugin
 
-Official plugin for [dFlow](https://dflow.sh). It connects an agent to dFlow Cloud so it can host apps, databases, and services.
+Official plugin for [dFlow](https://dflow.sh). Deploy your apps and databases in one place. The agent uses the same tools as the dFlow dashboard.
 
 This repository is a thin marketplace wrapper around the hosted **dFlow MCP server**. It does not ship skills, slash commands, hooks, or local binaries.
 
