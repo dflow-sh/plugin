@@ -2,8 +2,7 @@
   "mcpServers": {
     "dflow": {
       "type": "http",
-      "url": "https://app.dflow.sh/api/mcp",
-      "note": "Official dFlow Cloud MCP server. Uses OAuth — on first connection the agent is prompted to authorize in the browser. No API key. Tenant-scoped to the organisation you approve; same permissions as the dFlow dashboard."
+      "url": "https://app.dflow.sh/api/mcp"
     }
   }
 }

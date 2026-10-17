@@ -2,7 +2,7 @@
 
 Official plugin for [dFlow](https://dflow.sh). Deploy your apps and databases in one place. The agent uses the same tools as the dFlow dashboard.
 
-This repository is a thin marketplace wrapper around the hosted **dFlow MCP server**. It does not ship skills, slash commands, hooks, or local binaries.
+This repository is the marketplace plugin for the hosted **dFlow MCP server**. Installing it connects the agent and installs the `dflow-deploy` and `dflow-mcp` skills. The same skills also live in [dflow-sh/skills](https://github.com/dflow-sh/skills) for agents that install skills without this plugin.
 
 This is **dflow.sh**, not the unrelated Solana project of a similar name.
 
@@ -61,16 +61,18 @@ Complete the OAuth prompt, then run a read-only tool such as listing application
 ```text
 .
 ├── mcp.json                      # Cursor MCP config
-├── .mcp.json                     # Claude Code MCP config (same URL, plus a sign-in note)
+├── .mcp.json                     # Claude Code MCP config
 ├── .cursor-plugin/plugin.json    # Cursor manifest
 ├── .grok-plugin/plugin.json      # Grok manifest; points at ./mcp.json
 ├── .claude-plugin/plugin.json    # Claude Code manifest
+├── skills/dflow-deploy/SKILL.md
+├── skills/dflow-mcp/SKILL.md
 ├── assets/logo.svg
 ├── README.md
 └── LICENSE
 ```
 
-One server URL. Each product only gets the manifest folder it looks for. This repo does not ship skills, agents, commands, or hooks.
+One server URL. Each product only gets the manifest folder it looks for. This repo does not ship agents, commands, or hooks.
 
 ## Network and security
 
