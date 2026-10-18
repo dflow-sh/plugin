@@ -44,6 +44,16 @@ Until then you can load this repo as a local Cursor plugin (Settings → Plugins
 
 Claude Code reads `.mcp.json` and `.claude-plugin/plugin.json` from this repo. On first connect, approve OAuth in the browser.
 
+### Gemini
+
+Gemini finds this repo when it has the GitHub topic `gemini-cli-extension`. Install it with:
+
+```bash
+gemini extensions install dflow-sh/plugin
+```
+
+The server URL is in `gemini-extension.json`. Approve OAuth in the browser on first connect.
+
 ### Grok / xAI
 
 Once listed on the [xAI plugin marketplace](https://github.com/xai-org/plugin-marketplace), install from Grok Build’s marketplace UI.
@@ -65,6 +75,7 @@ Complete the OAuth prompt, then run a read-only tool such as listing application
 ├── .cursor-plugin/plugin.json    # Cursor manifest
 ├── .grok-plugin/plugin.json      # Grok manifest; points at ./mcp.json
 ├── .claude-plugin/plugin.json    # Claude Code manifest
+├── gemini-extension.json         # Gemini extension manifest
 ├── skills/dflow-deploy/SKILL.md
 ├── skills/dflow-mcp/SKILL.md
 ├── assets/logo.svg

@@ -1,0 +1,11 @@
+{
+  "name": "dflow",
+  "version": "0.1.0",
+  "description": "Deploy apps and databases on dFlow from your agent. Inspect logs, set variables, and attach databases with the same permissions as the dashboard.",
+  "mcpServers": {
+    "dflow": {
+      "httpUrl": "https://app.dflow.sh/api/mcp",
+      "authProviderType": "dynamic_discovery"
+    }
+  }
+}
